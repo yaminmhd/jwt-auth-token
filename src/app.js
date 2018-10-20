@@ -33,8 +33,9 @@ app.use(function(req, res, next) {
 // default error handler
 
 if (!isProduction) {
-  // return more information for trouble shooting if we are not running in production
+  // eslint-disable-next-line no-unused-vars
   app.use(function(err, req, res, next) {
+    // return more information for trouble shooting if we are not running in production
     if (err.stack) {
       logger.error(err.stack);
     }
@@ -49,6 +50,7 @@ if (!isProduction) {
   });
 }
 
+// eslint-disable-next-line no-unused-vars
 app.use(function(err, req, res, next) {
   res.status(err.status || status.INTERNAL_SERVER_ERROR);
   res.json({
