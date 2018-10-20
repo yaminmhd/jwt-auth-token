@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node src/server.js",
-    "dev": "cross-env NODE_ENV=development nodemon src/server.js"
+    "dev": "cross-env NODE_ENV=development nodemon src/server.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
